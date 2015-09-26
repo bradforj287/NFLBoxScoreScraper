@@ -118,7 +118,9 @@ function scrapePlayerInfo(playerLink, finishedFunc) {
 
             var playerInfo = {
                 playerLink: playerLink,
-                position: $("#div_fantasy tbody tr").last().find('td:nth-child(4)').html()
+                position: $("#div_fantasy tbody tr").last().find('td:nth-child(4)').html(),
+                birthday: $("#necro-birth").attr("data-birth"),
+                name: $("#info_box > div.float_left > h1").html()
             };
 
 
@@ -256,7 +258,7 @@ function scrapeNflYear(year, finishedFunc) {
     });
 }
 
-var firstYear = 2015;
+var firstYear = 1997;
 var lastYear = 2015;
 
 function scrapeAllPlayerInfo() {
@@ -322,4 +324,3 @@ function scrapeYears() {
 scrapeYears();
 
 
-exports = module.exports = app;
