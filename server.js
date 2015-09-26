@@ -1,10 +1,22 @@
-var express = require('express');
 var fs = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
-var app = express();
+var async = require("async");
+var HtmlEntities = require('html-entities').AllHtmlEntities;
+entities = new HtmlEntities();
 
-var REQUEST_DELAY = 10;
+
+
+var NUM_PARALLEL_REQ = 1;
+
+function chunkArray(arr, chunkSize) {
+    var array = arr;
+    return [].concat.apply([],
+        array.map(function (elem, i) {
+            return i % chunkSize ? [] : [array.slice(i, i + chunkSize)];
+        })
+    );
+}
 
 var teamNameToShortHand = {
     "Seattle Seahawks": "SEA",
@@ -77,6 +89,10 @@ function scrapeGameSummaries(year, finishedFunc) {
                 if (row.find('td:nth-child(3) strong').html() == "Playoffs") {
                     return;
                 }
+                var thePoints = row.find('td:nth-child(8) strong').html();
+                if (!thePoints) {
+                    thePoints = row.find('td:nth-child(8)').html();
+                }
                 var gameSummary = {
                     seasonYear: year,
                     week: row.find('td:nth-child(1)').html(),
@@ -86,7 +102,7 @@ function scrapeGameSummaries(year, finishedFunc) {
                     winningTeam: row.find('td:nth-child(5) a').html(),
                     isWinningTeamHome: row.find('td:nth-child(6)').html() !== "@",
                     losingTeam: row.find('td:nth-child(7) a').html(),
-                    wtPoints: row.find('td:nth-child(8) strong').html(),
+                    wtPoints: thePoints,
                     ltPoints: row.find('td:nth-child(9)').html(),
                     wtYards: row.find('td:nth-child(10)').html(),
                     wtTurnovers: row.find('td:nth-child(11)').html(),
@@ -120,9 +136,8 @@ function scrapePlayerInfo(playerLink, finishedFunc) {
                 playerLink: playerLink,
                 position: $("#div_fantasy tbody tr").last().find('td:nth-child(4)').html(),
                 birthday: $("#necro-birth").attr("data-birth"),
-                name: $("#info_box > div.float_left > h1").html()
+                name: entities.decode($("#info_box > div.float_left > h1").html()).toLowerCase()
             };
-
 
             finishedFunc(playerInfo, true);
         } else {
@@ -159,7 +174,7 @@ function scrapeBoxScore(summary, finishedFunc) {
                 }
                 var playerStats = {
                     playerLink: row.find('td:nth-child(1) a').attr("href"),
-                    playerName: row.find('td:nth-child(1) a').html(),
+                    playerName: entities.decode(row.find('td:nth-child(1) a').html()).toLowerCase(),
                     team: row.find('td:nth-child(2)').html(),
                     passing: {
                         completions: row.find('td:nth-child(3)').html(),
@@ -198,32 +213,41 @@ function scrapeBoxScore(summary, finishedFunc) {
     });
 }
 
-function scrapeBoxScores(summaries, onFinishFunc) {
-
-    var i = 0;
-
-    var onFinish = function (data) {
-        var week = summaries[i].week;
-        var wTeam = getShortName(summaries[i].winningTeam);
-        var lTeam = getShortName(summaries[i].losingTeam);
-        var fileName = "week_" + week + "_" + wTeam + "_" + lTeam + ".json";
-        var filePath = "nfl_data/" + summaries[i].seasonYear + "/box_scores/" + fileName;
-        allBoxScores.push(data);
-        if (data.playerStatsList.length > 0) {
-            fs.writeFile(filePath, toJSON(data), function (err) {
-                console.log(filePath);
+function scrapeBoxScoreChunk(summaries, onFinishFunc) {
+    async.each(summaries,
+        function (item, callback) {
+            scrapeBoxScore(item, function (data) {
+                var week = item.week;
+                var wTeam = getShortName(item.winningTeam);
+                var lTeam = getShortName(item.losingTeam);
+                var fileName = "week_" + week + "_" + wTeam + "_" + lTeam + ".json";
+                var filePath = "nfl_data/" + item.seasonYear + "/box_scores/" + fileName;
+                allBoxScores.push(data);
+                if (data.playerStatsList.length > 0) {
+                    fs.writeFile(filePath, toJSON(data), function (err) {
+                        console.log(filePath);
+                    });
+                }
+                callback();
             });
-        }
-        i++;
-        if (i >= summaries.length) {
+        },
+        function (err) {
             onFinishFunc();
-            return;
         }
-        setTimeout(function () {
-            scrapeBoxScore(summaries[i], onFinish);
-        }, REQUEST_DELAY);
-    };
-    scrapeBoxScore(summaries[i], onFinish);
+    );
+}
+
+function scrapeBoxScores(summaries, onFinishFunc) {
+    var chunkedArray = chunkArray(summaries, NUM_PARALLEL_REQ);
+
+    async.eachSeries(chunkedArray,
+        function (item, callback) {
+            scrapeBoxScoreChunk(item, callback);
+        },
+        function (err) {
+            onFinishFunc();
+        }
+    );
 }
 
 function ensureDirs(year) {
@@ -248,20 +272,30 @@ function scrapeNflYear(year, finishedFunc) {
             console.log('wrote ' + filePath);
         });
 
-        setTimeout(function () {
-            scrapeBoxScores(data, function () {
-                console.log('finished scraping box scores for year ' + year);
-                finishedFunc();
-            });
-        }, REQUEST_DELAY);
-
+        scrapeBoxScores(data, finishedFunc);
     });
 }
 
-var firstYear = 1997;
-var lastYear = 2015;
+function scrapePlayerInfoChunk(list, cb) {
+    async.each(list,
+        function (item, callback) {
+            console.log('scraping player_info: ' + item);
+            scrapePlayerInfo(item, function (data) {
+                var fileName = data.playerLink.replace(/\//g, "-") + ".json";
+                var filePath = "nfl_data/players/" + fileName;
+                fs.writeFile(filePath, toJSON(data), function (err) {
+                    console.log('wrote ' + filePath);
+                });
+                callback();
+            });
+        },
+        function (err) {
+            cb();
+        }
+    );
+}
 
-function scrapeAllPlayerInfo() {
+function scrapeAllPlayerInfo(cb) {
     var playerMap = [];
     var scrapeList = [];
     allBoxScores.forEach(function (bs) {
@@ -275,52 +309,37 @@ function scrapeAllPlayerInfo() {
         });
     });
 
-    var i = 0;
+    var chunkedArray = chunkArray(scrapeList, NUM_PARALLEL_REQ);
 
-    var onFinish = function (data) {
-        i++;
-        if (i >= scrapeList.length) {
-            return;
+    var chunk = 1;
+    async.eachSeries(chunkedArray,
+        function (item, callback) {
+            console.log("** Scraping chunk " + chunk + "/" + chunkedArray.length);
+            scrapePlayerInfoChunk(item, callback);
+            chunk++;
+        },
+        function (err) {
+            console.log("Finished scraping player info");
         }
+    );
+}
 
-        var fileName = data.playerLink.replace(/\//g, "-") + ".json";
-        var filePath = "nfl_data/players/" + fileName;
-        fs.writeFile(filePath, toJSON(data), function (err) {
-            console.log('wrote ' + filePath);
-        });
 
-        setTimeout(function () {
-            scrape();
-        }, REQUEST_DELAY);
-    };
+var firstYear = 1997;
+var lastYear = 2015;
 
-    function scrape() {
-        console.log('scraping ' + (i + 1) + '/' + scrapeList.length + ' player_info: ' + scrapeList[i]);
-        scrapePlayerInfo(scrapeList[i], onFinish);
+var years = [];
+
+for (var i = firstYear; i <= lastYear; i++) {
+    years.push(i);
+}
+
+async.eachSeries(years,
+    function (item, callback) {
+        scrapeNflYear(item, callback);
+    },
+    function (err) {
+        console.log("finished scraping NFL years");
+        scrapeAllPlayerInfo();
     }
-
-    scrape();
-}
-
-function scrapeYears() {
-    var cYear = firstYear;
-
-    var onFinish = function () {
-        console.log("finished scraping year " + cYear);
-        cYear++;
-        if (cYear > lastYear) {
-            scrapeAllPlayerInfo();
-            return;
-        }
-
-        setTimeout(function () {
-            scrapeNflYear(cYear, onFinish);
-        }, REQUEST_DELAY);
-    };
-
-    scrapeNflYear(cYear, onFinish);
-}
-
-scrapeYears();
-
-
+);
