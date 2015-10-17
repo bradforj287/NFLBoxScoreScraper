@@ -1,12 +1,16 @@
 NFL Box Score Web Scraper
 ================
 
-A web scraper that will download box scores from http://www.profootballreference.com into JSON format. It will download all box scores and player data. Please refer to arguments.json to set program parameters. 
+A web scraper that will download box scores from http://www.profootballreference.com into JSON format. It will download all box scores and player data. Please refer to arguments.json to set program parameters. Useful for fantasy football analytics. 
 
-Program Usage:
-### 
+
+##Requirements:
+* Node.js
+
+##Program Usage:
+```
 npm start
-##
+```
 
 ##Program Arguments (set in arguments.json):
 * nflDataRoot - this is the directory that the box scores will be downloaded to
