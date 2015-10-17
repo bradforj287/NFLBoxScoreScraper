@@ -1,13 +1,13 @@
 {
-  "name"         : "node-web-scrape",
-  "version"      : "0.0.1",
-  "description"  : "Scrape le web.",
-  "main"         : "server.js",
-  "author"       : "Scotch",
-  "dependencies" : {
+  "name": "node-nfl-scraper",
+  "version": "0.1.0",
+  "description": "Node pro football reference scraper",
+  "main": "main.js",
+  "author": "bradforj287",
+  "dependencies": {
     "html-entities": "latest",
-    "async"    : "latest",
-    "request"    : "latest",
-    "cheerio"    : "latest"
+    "async": "latest",
+    "request": "latest",
+    "cheerio": "latest"
   }
 }

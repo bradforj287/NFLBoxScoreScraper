@@ -1,4 +1,4 @@
-node-web-scraper
+pro football reference web scraper
 ================
 
-Simple web scraper to get a movie name, release year and community rating from IMDB.
+A web scraper that will download box scores from www.profootballreference.com into JSON format.

@@ -5,6 +5,11 @@ var async = require("async");
 var HtmlEntities = require('html-entities').AllHtmlEntities;
 entities = new HtmlEntities();
 
+var programArgs = JSON.parse(fs.readFileSync('./arguments.json', 'utf8'));
+var firstYear = programArgs.minNflYear;
+var lastYear = programArgs.maxNflYear;
+var nflRootDir = programArgs.nflDataRoot;
+
 module.exports = fs.existsSync || function existsSync(filePath) {
         try {
             fs.statSync(filePath);
@@ -246,9 +251,11 @@ function scrapeBoxScoreChunk(summaries, onFinishFunc) {
             var wTeam = getShortName(item.winningTeam);
             var lTeam = getShortName(item.losingTeam);
             var fileName = "week_" + week + "_" + wTeam + "_" + lTeam + ".json";
-            var filePath = "nfl_data/" + item.seasonYear + "/box_scores/" + fileName;
+            var filePath = nflRootDir + "/" + item.seasonYear + "/box_scores/" + fileName;
             if (fs.existsSync(filePath)) {
                 console.log('NO NEED to scrape box score for: ' + item.boxScoreLink + " -> " + getGameTitleStr(item));
+                var theData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                recordPlayerLinks(theData);
                 callback();
             } else {
                 scrapeBoxScore(item, function (data) {
@@ -282,10 +289,10 @@ function scrapeBoxScores(summaries, onFinishFunc) {
 }
 
 function ensureDirs(year) {
-    mkdirSync("nfl_data");
-    mkdirSync("nfl_data/players");
-    mkdirSync("nfl_data/" + year);
-    mkdirSync("nfl_data/" + year + "/box_scores");
+    mkdirSync(nflRootDir);
+    mkdirSync(nflRootDir + "/players");
+    mkdirSync(nflRootDir + "/" + year);
+    mkdirSync(nflRootDir + "/" + year + "/box_scores");
 }
 
 function scrapeNflYear(year, finishedFunc) {
@@ -298,7 +305,7 @@ function scrapeNflYear(year, finishedFunc) {
             console.log("error scraping summaries! exiting");
             return;
         }
-        var filePath = "nfl_data/" + year + "/game_summaries.json";
+        var filePath = nflRootDir + "/" + year + "/game_summaries.json";
         fs.writeFile(filePath, toJSON(data), function (err) {
             console.log('wrote ' + filePath);
         });
@@ -311,7 +318,7 @@ function scrapePlayerInfoChunk(list, cb) {
     async.each(list,
         function (item, callback) {
             var fileName = item.replace(/\//g, "-") + ".json";
-            var filePath = "nfl_data/players/" + fileName;
+            var filePath = nflRootDir + "/players/" + fileName;
 
             if (fs.existsSync(filePath)) {
                 console.log('NOT scraping player_info: ' + item + ' already exists');
@@ -349,10 +356,6 @@ function scrapeAllPlayerInfo(cb) {
         }
     );
 }
-
-
-var firstYear = 2015;
-var lastYear = 2015;
 
 var years = [];
 

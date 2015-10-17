@@ -1,0 +1,5 @@
+{
+  "nflDataRoot" : "./nfl_data",
+  "minNflYear" : "2015",
+  "maxNflYear" : "2015"
+}
