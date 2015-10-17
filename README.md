@@ -9,6 +9,7 @@ A web scraper that will download box scores from http://www.profootballreference
 
 ##Program Usage:
 ```
+npm install
 npm start
 ```
 
