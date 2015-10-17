@@ -5,7 +5,14 @@ var async = require("async");
 var HtmlEntities = require('html-entities').AllHtmlEntities;
 entities = new HtmlEntities();
 
-
+module.exports = fs.existsSync || function existsSync(filePath) {
+        try {
+            fs.statSync(filePath);
+        } catch (err) {
+            if (err.code == 'ENOENT') return false;
+        }
+        return true;
+    };
 
 var NUM_PARALLEL_REQ = 1;
 
@@ -54,7 +61,25 @@ var teamNameToShortHand = {
     "New York Giants": "NYG"
 };
 
-var allBoxScores = [];
+var playerLinksSeen = {};
+
+function recordPlayerLinks(bs) {
+    var playerStatsList = bs.playerStatsList;
+    playerStatsList.forEach(function (ps) {
+        var link = ps.playerLink;
+        playerLinksSeen[link] = true;
+    });
+}
+
+function getAllPlayerLinksSeen() {
+    var keys = [];
+    for (var key in playerLinksSeen) {
+        if (playerLinksSeen.hasOwnProperty(key)) {
+            keys.push(key);
+        }
+    }
+    return keys;
+}
 
 function toJSON(obj) {
     return JSON.stringify(obj, null, 2)
@@ -71,6 +96,7 @@ var mkdirSync = function (path) {
         if (e.code != 'EEXIST') throw e;
     }
 };
+
 
 function scrapeGameSummaries(year, finishedFunc) {
     var url = 'http://www.pro-football-reference.com/years/' + year + '/games.htm';
@@ -216,20 +242,25 @@ function scrapeBoxScore(summary, finishedFunc) {
 function scrapeBoxScoreChunk(summaries, onFinishFunc) {
     async.each(summaries,
         function (item, callback) {
-            scrapeBoxScore(item, function (data) {
-                var week = item.week;
-                var wTeam = getShortName(item.winningTeam);
-                var lTeam = getShortName(item.losingTeam);
-                var fileName = "week_" + week + "_" + wTeam + "_" + lTeam + ".json";
-                var filePath = "nfl_data/" + item.seasonYear + "/box_scores/" + fileName;
-                allBoxScores.push(data);
-                if (data.playerStatsList.length > 0) {
-                    fs.writeFile(filePath, toJSON(data), function (err) {
-                        console.log(filePath);
-                    });
-                }
+            var week = item.week;
+            var wTeam = getShortName(item.winningTeam);
+            var lTeam = getShortName(item.losingTeam);
+            var fileName = "week_" + week + "_" + wTeam + "_" + lTeam + ".json";
+            var filePath = "nfl_data/" + item.seasonYear + "/box_scores/" + fileName;
+            if (fs.existsSync(filePath)) {
+                console.log('NO NEED to scrape box score for: ' + item.boxScoreLink + " -> " + getGameTitleStr(item));
                 callback();
-            });
+            } else {
+                scrapeBoxScore(item, function (data) {
+                    recordPlayerLinks(data);
+                    if (data.playerStatsList.length > 0) {
+                        fs.writeFile(filePath, toJSON(data), function (err) {
+                            console.log(filePath);
+                        });
+                    }
+                    callback();
+                });
+            }
         },
         function (err) {
             onFinishFunc();
@@ -279,15 +310,22 @@ function scrapeNflYear(year, finishedFunc) {
 function scrapePlayerInfoChunk(list, cb) {
     async.each(list,
         function (item, callback) {
-            console.log('scraping player_info: ' + item);
-            scrapePlayerInfo(item, function (data) {
-                var fileName = data.playerLink.replace(/\//g, "-") + ".json";
-                var filePath = "nfl_data/players/" + fileName;
-                fs.writeFile(filePath, toJSON(data), function (err) {
-                    console.log('wrote ' + filePath);
-                });
+            var fileName = item.replace(/\//g, "-") + ".json";
+            var filePath = "nfl_data/players/" + fileName;
+
+            if (fs.existsSync(filePath)) {
+                console.log('NOT scraping player_info: ' + item + ' already exists');
                 callback();
-            });
+            } else {
+                console.log('scraping player_info: ' + item);
+                scrapePlayerInfo(item, function (data) {
+
+                    fs.writeFile(filePath, toJSON(data), function (err) {
+                        console.log('wrote ' + filePath);
+                    });
+                    callback();
+                });
+            }
         },
         function (err) {
             cb();
@@ -296,21 +334,9 @@ function scrapePlayerInfoChunk(list, cb) {
 }
 
 function scrapeAllPlayerInfo(cb) {
-    var playerMap = [];
-    var scrapeList = [];
-    allBoxScores.forEach(function (bs) {
-        var playerStatsList = bs.playerStatsList;
-        playerStatsList.forEach(function (ps) {
-            var link = ps.playerLink;
-            if (playerMap[link] !== true) {
-                playerMap[link] = true;
-                scrapeList.push(link);
-            }
-        });
-    });
+    var scrapeList = getAllPlayerLinksSeen();
 
     var chunkedArray = chunkArray(scrapeList, NUM_PARALLEL_REQ);
-
     var chunk = 1;
     async.eachSeries(chunkedArray,
         function (item, callback) {
@@ -325,7 +351,7 @@ function scrapeAllPlayerInfo(cb) {
 }
 
 
-var firstYear = 1997;
+var firstYear = 2015;
 var lastYear = 2015;
 
 var years = [];
@@ -333,6 +359,7 @@ var years = [];
 for (var i = firstYear; i <= lastYear; i++) {
     years.push(i);
 }
+
 
 async.eachSeries(years,
     function (item, callback) {
