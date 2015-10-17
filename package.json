@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Node pro football reference scraper",
   "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
   "author": "bradforj287",
   "dependencies": {
     "html-entities": "latest",
