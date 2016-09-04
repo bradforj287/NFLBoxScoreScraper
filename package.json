@@ -4,7 +4,8 @@
   "description": "Node pro football reference scraper",
   "main": "./src/main.js",
   "scripts": {
-    "start": "node ./src/main.js"
+    "start": "node ./src/main.js",
+    "pack": "node ./src/pack.js"
   },
   "author": "bradforj287",
   "dependencies": {
