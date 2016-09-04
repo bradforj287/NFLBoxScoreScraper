@@ -212,9 +212,8 @@ var summary = {
 /*
 nflScraper.scrapeGameSummaries(2015, (summaries) => {
    console.log(summaries)
-});*/
+}); */
 
 nflScraper.scrapeBoxScore(summary, (boxscore) => {
-    console.log("finished");
     console.log(boxscore);
 });

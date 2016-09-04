@@ -1,57 +1,35 @@
 var exports = module.exports = {};
 
-var request = require('request');
+var nflUtils = require('../utils/nfl-utils.js');
 var cheerio = require('cheerio');
 var async = require("async");
-var phantom = require('phantom');
-
+var Horseman = require("node-horseman");
 var HtmlEntities = require('html-entities').AllHtmlEntities;
 var entities = new HtmlEntities();
 
-var nflUtils = require('../utils/nfl-utils.js');
+const TIME_TO_WAIT_FOR_LOAD = 1000;
 
-/**
- * creates a new phantom js instance and fetches the page at the specified url
- * @param url - url of page to scrape
- * @param cb - called with data on success
- * @param fb - called on failure
- */
-function fetchHtmlPhantomJs(url, cb, fb) {
-    var sitepage = null;
-    var phInstance = null;
-    phantom.create()
-        .then(instance => {
-            phInstance = instance;
-            return instance.createPage();
-        })
-        .then(page => {
-            sitepage = page;
-            return page.open(url);
-        })
-        .then(status => {
-            console.log(status);
-            return sitepage.property('content');
-        })
-        .then(content => {
-            // console.log(content);
-            sitepage.close();
-            phInstance.exit();
-            cb(content);
-        })
-        .catch(error => {
-            console.log(error);
-            phInstance.exit();
-            process.exit();
+function fetchHtmlPhantomJs(url, selector, cb, fb) {
+    var horseman = new Horseman();
+
+    horseman
+        .viewport(1920, 1080)
+        .open(url)
+        .wait(TIME_TO_WAIT_FOR_LOAD)
+        .html(selector)
+        .close()
+        .then((html) => {
+            cb(html);
         });
 }
 
 exports.scrapeGameSummaries = function(nflYear, finishedFunc) {
     var url = 'http://www.pro-football-reference.com/years/' + nflYear + '/games.htm';
 
-    fetchHtmlPhantomJs(url, function(html) {
+    fetchHtmlPhantomJs(url, '#games', function(html) {
         var $ = cheerio.load(html);
         var retVal = [];
-        $("#games tbody tr").each(function(index) {
+        $("tbody tr").each(function(index) {
 
             var row = $(this);
             if (row.hasClass("thead")) {
@@ -86,65 +64,54 @@ exports.scrapeGameSummaries = function(nflYear, finishedFunc) {
     });
 };
 
-exports.scrapeBoxScore = function(summary, finishedFunc) {
+function parseBoxScoreCsv(csv) {
+    console.log(csv);
+    return null;
+}
+
+exports.scrapeBoxScore = function(summary, cb) {
     var url = 'http://www.pro-football-reference.com' + summary.boxScoreLink;
-
     console.log('scraping box score for: ' + summary.boxScoreLink + " -> " + nflUtils.getGameTitleForSummary(summary));
-    fetchHtmlPhantomJs(url, (html) => {
-        var $ = cheerio.load(html);
-        var playerStatsList = [];
-        var hasTargetCol = $("#skill_stats thead th[data-stat=targets]").length > 0;
-        $("#player_offense tbody tr").each(function(index) {
-            var row = $(this);
-            if (row.hasClass("thead")) {
-                return
-            }
 
-            function getColSelector(col) {
-                return "td:nth-child(" + col + ")";
-            }
-
-            // in 2015 they added targets. so shift columns over
-            var receivingBase = 13;
-            if (hasTargetCol) {
-                receivingBase++;
-            }
-            var playerStats = {
-                playerLink: row.find('td:nth-child(1) a').attr("href"),
-                playerName: entities.decode(row.find('td:nth-child(1) a').html()).toLowerCase(),
-                team: row.find('td:nth-child(2)').html(),
-                passing: {
-                    completions: row.find('td:nth-child(3)').html(),
-                    attempts: row.find('td:nth-child(4)').html(),
-                    yards: row.find('td:nth-child(5)').html(),
-                    td: row.find('td:nth-child(6)').html(),
-                    int: row.find('td:nth-child(7)').html(),
-                    longest: row.find('td:nth-child(8)').html()
-                },
-                rushing: {
-                    attempts: row.find('td:nth-child(9)').html(),
-                    yards: row.find('td:nth-child(10)').html(),
-                    td: row.find('td:nth-child(11)').html(),
-                    longest: row.find('td:nth-child(12)').html()
-                },
-                receiving: {
-                    receptions: row.find(getColSelector(receivingBase)).html(),
-                    yards: row.find(getColSelector(receivingBase + 1)).html(),
-                    td: row.find(getColSelector(receivingBase + 2)).html(),
-                    longest: row.find(getColSelector(receivingBase + 3)).html()
-                }
-            };
-            playerStats.receiving.targets = row.find(getColSelector(13)).html();
-            playerStatsList.push(playerStats);
+    var horseman = new Horseman();
+    horseman
+        .viewport(1920,1080)
+        .open(url)
+        .wait(TIME_TO_WAIT_FOR_LOAD)
+        .click('#all_player_offense .section_heading_text .hasmore li:nth-child(3) button')
+        .wait(1000)
+        .text('#csv_player_offense')
+        .close()
+        .then((text) => {
+            var boxScore = parseBoxScoreCsv(text);
+            cb(boxScore);
         });
 
-        var boxScore = {
-            boxScoreLink: summary.boxScoreLink,
-            playerStatsList: playerStatsList
-
-        };
-        finishedFunc(boxScore, true);
-    });
+    /*var playerStats = {
+        playerLink: row.find('th:nth-child(1) a').attr("href"),
+        playerName: entities.decode(row.find('th:nth-child(1) a').html()).toLowerCase(),
+        team: row.find('td:nth-child(2)').html(),
+        passing: {
+            completions: row.find('td:nth-child(3)').html(),
+            attempts: row.find('td:nth-child(4)').html(),
+            yards: row.find('td:nth-child(5)').html(),
+            td: row.find('td:nth-child(6)').html(),
+            int: row.find('td:nth-child(7)').html(),
+            longest: row.find('td:nth-child(8)').html()
+        },
+        rushing: {
+            attempts: row.find('td:nth-child(9)').html(),
+            yards: row.find('td:nth-child(10)').html(),
+            td: row.find('td:nth-child(11)').html(),
+            longest: row.find('td:nth-child(12)').html()
+        },
+        receiving: {
+            receptions: row.find(getColSelector(receivingBase)).html(),
+            yards: row.find(getColSelector(receivingBase + 1)).html(),
+            td: row.find(getColSelector(receivingBase + 2)).html(),
+            longest: row.find(getColSelector(receivingBase + 3)).html()
+        }
+    };*/
 };
 
 exports.scrapePlayerInfo = function(playerLink, finishedFunc) {
