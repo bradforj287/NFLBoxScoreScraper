@@ -118,7 +118,13 @@ exports.scrapeBoxScore = function(summary, cb) {
         .text('#csv_player_offense')
         .close()
         .then((text) => {
-            parseBoxScoreCsv(text, cb);
+            parseBoxScoreCsv(text, (statsList) => {
+                var boxScore = {
+                    boxScoreLink: summary.boxScoreLink,
+                    playerStatsList: statsList
+                };
+                cb(boxScore);
+            });
         });
 };
 
