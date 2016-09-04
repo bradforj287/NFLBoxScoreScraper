@@ -1,0 +1,645 @@
+{
+  "boxScoreLink": "/boxscores/201509200pit.htm",
+  "playerStatsList": [
+    {
+      "playerLink": "/players/K/KaepCo00.htm",
+      "playerName": "Colin Kaepernick",
+      "team": "SFO",
+      "passing": {
+        "cmp": "33",
+        "att": "46",
+        "yds": "335",
+        "td": "2",
+        "int": "0",
+        "sk": "5",
+        "lng": "75",
+        "rate": "106.7"
+      },
+      "rushing": {
+        "att": "9",
+        "yds": "51",
+        "td": "0",
+        "lng": "14"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "2",
+        "fl": "1"
+      }
+    },
+    {
+      "playerLink": "/players/H/HydeCa00.htm",
+      "playerName": "Carlos Hyde",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "13",
+        "yds": "43",
+        "td": "0",
+        "lng": "10"
+      },
+      "receiving": {
+        "tgt": "4",
+        "rec": "4",
+        "yds": "18",
+        "td": "0",
+        "lng": "11"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/D/DaviMi01.htm",
+      "playerName": "Mike Davis",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "7",
+        "yds": "14",
+        "td": "0",
+        "lng": "5"
+      },
+      "receiving": {
+        "tgt": "4",
+        "rec": "2",
+        "yds": "4",
+        "td": "0",
+        "lng": "3"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/H/HaynJa00.htm",
+      "playerName": "Jarryd Hayne",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "2",
+        "yds": "3",
+        "td": "0",
+        "lng": "2"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/S/SmitTo02.htm",
+      "playerName": "Torrey Smith",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "7",
+        "rec": "6",
+        "yds": "120",
+        "td": "1",
+        "lng": "75"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/D/DaviVe00.htm",
+      "playerName": "Vernon Davis",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "7",
+        "rec": "5",
+        "yds": "62",
+        "td": "0",
+        "lng": "43"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BoldAn00.htm",
+      "playerName": "Anquan Boldin",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "10",
+        "rec": "6",
+        "yds": "60",
+        "td": "1",
+        "lng": "14"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/P/PattQu00.htm",
+      "playerName": "Quinton Patton",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "4",
+        "rec": "4",
+        "yds": "25",
+        "td": "0",
+        "lng": "9"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/W/WhitDe01.htm",
+      "playerName": "DeAndrew White",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "2",
+        "yds": "18",
+        "td": "0",
+        "lng": "10"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BellBl00.htm",
+      "playerName": "Blake Bell",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "1",
+        "yds": "11",
+        "td": "0",
+        "lng": "11"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/C/CeleGa00.htm",
+      "playerName": "Garrett Celek",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "2",
+        "yds": "10",
+        "td": "0",
+        "lng": "7"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/M/MillBr02.htm",
+      "playerName": "Bruce Miller",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "1",
+        "yds": "7",
+        "td": "0",
+        "lng": "7"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/R/RoetBe00.htm",
+      "playerName": "Ben Roethlisberger",
+      "team": "PIT",
+      "passing": {
+        "cmp": "21",
+        "att": "27",
+        "yds": "369",
+        "td": "3",
+        "int": "0",
+        "sk": "0",
+        "lng": "59",
+        "rate": "155.8"
+      },
+      "rushing": {
+        "att": "1",
+        "yds": "-1",
+        "td": "0",
+        "lng": "-1"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/W/WillDe02.htm",
+      "playerName": "DeAngelo Williams",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "20",
+        "yds": "77",
+        "td": "3",
+        "lng": "16"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "4",
+        "yds": "15",
+        "td": "0",
+        "lng": "11"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/T/TodmJo00.htm",
+      "playerName": "Jordan Todman",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "1",
+        "yds": "11",
+        "td": "0",
+        "lng": "11"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BrowAn04.htm",
+      "playerName": "Antonio Brown",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "11",
+        "rec": "9",
+        "yds": "195",
+        "td": "1",
+        "lng": "59"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/H/HeywDa00.htm",
+      "playerName": "Darrius Heyward-Bey",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "4",
+        "yds": "77",
+        "td": "1",
+        "lng": "41"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/W/WheaMa00.htm",
+      "playerName": "Markus Wheaton",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "4",
+        "rec": "2",
+        "yds": "67",
+        "td": "0",
+        "lng": "48"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/M/MillHe00.htm",
+      "playerName": "Heath Miller",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "2",
+        "yds": "15",
+        "td": "1",
+        "lng": "13"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/V/VickMi00.htm",
+      "playerName": "Michael Vick",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "3",
+        "yds": "-3",
+        "td": "0",
+        "lng": "-1"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    }
+  ]
+}

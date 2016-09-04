@@ -1,0 +1,581 @@
+{
+  "boxScoreLink": "/boxscores/201510040sdg.htm",
+  "playerStatsList": [
+    {
+      "playerLink": "/players/M/McCoJo01.htm",
+      "playerName": "Josh McCown",
+      "team": "CLE",
+      "passing": {
+        "cmp": "32",
+        "att": "41",
+        "yds": "356",
+        "td": "2",
+        "int": "0",
+        "sk": "4",
+        "lng": "53",
+        "rate": "119.1"
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "1",
+        "fl": "1"
+      }
+    },
+    {
+      "playerLink": "/players/C/CrowIs00.htm",
+      "playerName": "Isaiah Crowell",
+      "team": "CLE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "12",
+        "yds": "63",
+        "td": "0",
+        "lng": "32"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "3",
+        "yds": "62",
+        "td": "0",
+        "lng": "53"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/J/JohnDu00.htm",
+      "playerName": "Duke Johnson",
+      "team": "CLE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "8",
+        "yds": "31",
+        "td": "0",
+        "lng": "9"
+      },
+      "receiving": {
+        "tgt": "10",
+        "rec": "9",
+        "yds": "85",
+        "td": "1",
+        "lng": "34"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/D/DrauSh00.htm",
+      "playerName": "Shaun Draughn",
+      "team": "CLE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "1",
+        "yds": "6",
+        "td": "0",
+        "lng": "6"
+      },
+      "receiving": {
+        "tgt": "1",
+        "rec": "1",
+        "yds": "-1",
+        "td": "0",
+        "lng": "-1"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BenjTr00.htm",
+      "playerName": "Travis Benjamin",
+      "team": "CLE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "10",
+        "rec": "6",
+        "yds": "79",
+        "td": "0",
+        "lng": "18"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BarnGa01.htm",
+      "playerName": "Gary Barnidge",
+      "team": "CLE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "6",
+        "rec": "6",
+        "yds": "75",
+        "td": "1",
+        "lng": "27"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/H/HawkAn00.htm",
+      "playerName": "Andrew Hawkins",
+      "team": "CLE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "2",
+        "yds": "27",
+        "td": "0",
+        "lng": "18"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/G/GabrTa00.htm",
+      "playerName": "Taylor Gabriel",
+      "team": "CLE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "4",
+        "yds": "22",
+        "td": "0",
+        "lng": "10"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/H/HartBr00.htm",
+      "playerName": "Brian Hartline",
+      "team": "CLE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "1",
+        "rec": "1",
+        "yds": "7",
+        "td": "0",
+        "lng": "7"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/R/RivePh00.htm",
+      "playerName": "Philip Rivers",
+      "team": "SDG",
+      "passing": {
+        "cmp": "23",
+        "att": "38",
+        "yds": "358",
+        "td": "3",
+        "int": "0",
+        "sk": "2",
+        "lng": "68",
+        "rate": "118.1"
+      },
+      "rushing": {
+        "att": "1",
+        "yds": "-1",
+        "td": "0",
+        "lng": "-1"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/W/WoodDa02.htm",
+      "playerName": "Danny Woodhead",
+      "team": "SDG",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "8",
+        "yds": "54",
+        "td": "0",
+        "lng": "19"
+      },
+      "receiving": {
+        "tgt": "4",
+        "rec": "4",
+        "yds": "84",
+        "td": "0",
+        "lng": "61"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/G/GordMe00.htm",
+      "playerName": "Melvin Gordon",
+      "team": "SDG",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "12",
+        "yds": "38",
+        "td": "0",
+        "lng": "23"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "2",
+        "yds": "8",
+        "td": "0",
+        "lng": "5"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/I/InmaDo00.htm",
+      "playerName": "Dontrelle Inman",
+      "team": "SDG",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "3",
+        "yds": "88",
+        "td": "0",
+        "lng": "68"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/A/AlleKe00.htm",
+      "playerName": "Keenan Allen",
+      "team": "SDG",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "7",
+        "rec": "4",
+        "yds": "72",
+        "td": "1",
+        "lng": "31"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/G/GreeLa00.htm",
+      "playerName": "Ladarius Green",
+      "team": "SDG",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "6",
+        "rec": "4",
+        "yds": "53",
+        "td": "1",
+        "lng": "19"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/J/JohnSt00.htm",
+      "playerName": "Steve Johnson",
+      "team": "SDG",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "8",
+        "rec": "4",
+        "yds": "32",
+        "td": "0",
+        "lng": "13"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/F/FloyMa00.htm",
+      "playerName": "Malcom Floyd",
+      "team": "SDG",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "1",
+        "yds": "20",
+        "td": "0",
+        "lng": "20"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/P/PhilJo00.htm",
+      "playerName": "John Phillips",
+      "team": "SDG",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "1",
+        "yds": "1",
+        "td": "1",
+        "lng": "1"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    }
+  ]
+}

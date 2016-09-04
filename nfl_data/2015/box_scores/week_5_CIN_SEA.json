@@ -1,0 +1,549 @@
+{
+  "boxScoreLink": "/boxscores/201510110cin.htm",
+  "playerStatsList": [
+    {
+      "playerLink": "/players/W/WilsRu00.htm",
+      "playerName": "Russell Wilson",
+      "team": "SEA",
+      "passing": {
+        "cmp": "15",
+        "att": "23",
+        "yds": "213",
+        "td": "1",
+        "int": "1",
+        "sk": "4",
+        "lng": "46",
+        "rate": "91.4"
+      },
+      "rushing": {
+        "att": "3",
+        "yds": "21",
+        "td": "0",
+        "lng": "9"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/R/RawlTh00.htm",
+      "playerName": "Thomas Rawls",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "23",
+        "yds": "169",
+        "td": "1",
+        "lng": "69"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/J/JackFr02.htm",
+      "playerName": "Fred Jackson",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "2",
+        "yds": "5",
+        "td": "0",
+        "lng": "5"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "3",
+        "yds": "29",
+        "td": "0",
+        "lng": "12"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/S/SmitRo06.htm",
+      "playerName": "Rod Smith",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "2",
+        "yds": "5",
+        "td": "0",
+        "lng": "3"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BaldDo00.htm",
+      "playerName": "Doug Baldwin",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "3",
+        "yds": "70",
+        "td": "0",
+        "lng": "46"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/K/KearJe01.htm",
+      "playerName": "Jermaine Kearse",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "2",
+        "yds": "38",
+        "td": "1",
+        "lng": "30"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/G/GrahJi00.htm",
+      "playerName": "Jimmy Graham",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "3",
+        "yds": "30",
+        "td": "0",
+        "lng": "22"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/L/LockTy00.htm",
+      "playerName": "Tyler Lockett",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "2",
+        "yds": "29",
+        "td": "0",
+        "lng": "22"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/W/WillLu00.htm",
+      "playerName": "Luke Willson",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "2",
+        "yds": "17",
+        "td": "0",
+        "lng": "9"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/D/DaltAn00.htm",
+      "playerName": "Andy Dalton",
+      "team": "CIN",
+      "passing": {
+        "cmp": "30",
+        "att": "44",
+        "yds": "331",
+        "td": "2",
+        "int": "1",
+        "sk": "4",
+        "lng": "44",
+        "rate": "95.9"
+      },
+      "rushing": {
+        "att": "7",
+        "yds": "18",
+        "td": "1",
+        "lng": "6"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BernGi00.htm",
+      "playerName": "Giovani Bernard",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "15",
+        "yds": "80",
+        "td": "0",
+        "lng": "13"
+      },
+      "receiving": {
+        "tgt": "8",
+        "rec": "5",
+        "yds": "21",
+        "td": "0",
+        "lng": "10"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/H/HillJe01.htm",
+      "playerName": "Jeremy Hill",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "8",
+        "yds": "13",
+        "td": "0",
+        "lng": "5"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "1",
+        "yds": "12",
+        "td": "0",
+        "lng": "12"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/E/EifeTy00.htm",
+      "playerName": "Tyler Eifert",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "12",
+        "rec": "8",
+        "yds": "90",
+        "td": "2",
+        "lng": "25"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/G/GreeA.00.htm",
+      "playerName": "A.J. Green",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "8",
+        "rec": "6",
+        "yds": "78",
+        "td": "0",
+        "lng": "22"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/S/SanuMo00.htm",
+      "playerName": "Mohamed Sanu",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "5",
+        "yds": "69",
+        "td": "0",
+        "lng": "25"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/J/JoneMa02.htm",
+      "playerName": "Marvin Jones",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "8",
+        "rec": "5",
+        "yds": "61",
+        "td": "0",
+        "lng": "44"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BurkRe00.htm",
+      "playerName": "Rex Burkhead",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "1",
+        "yds": "-2",
+        "td": "0",
+        "lng": "-2"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "1",
+        "fl": "1"
+      }
+    }
+  ]
+}

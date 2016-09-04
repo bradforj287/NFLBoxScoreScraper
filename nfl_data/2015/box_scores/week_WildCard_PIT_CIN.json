@@ -1,0 +1,517 @@
+{
+  "boxScoreLink": "/boxscores/201601090cin.htm",
+  "playerStatsList": [
+    {
+      "playerLink": "/players/R/RoetBe00.htm",
+      "playerName": "Ben Roethlisberger",
+      "team": "PIT",
+      "passing": {
+        "cmp": "18",
+        "att": "31",
+        "yds": "229",
+        "td": "1",
+        "int": "0",
+        "sk": "3",
+        "lng": "60",
+        "rate": "92.0"
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/J/JoneLa02.htm",
+      "playerName": "Landry Jones",
+      "team": "PIT",
+      "passing": {
+        "cmp": "2",
+        "att": "5",
+        "yds": "11",
+        "td": "0",
+        "int": "1",
+        "sk": "1",
+        "lng": "7",
+        "rate": "8.3"
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/T/TodmJo00.htm",
+      "playerName": "Jordan Todman",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "11",
+        "yds": "65",
+        "td": "0",
+        "lng": "25"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "1",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/T/TousFi00.htm",
+      "playerName": "Fitzgerald Toussaint",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "17",
+        "yds": "58",
+        "td": "0",
+        "lng": "9"
+      },
+      "receiving": {
+        "tgt": "8",
+        "rec": "4",
+        "yds": "60",
+        "td": "0",
+        "lng": "27"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BryaMa00.htm",
+      "playerName": "Martavis Bryant",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "1",
+        "yds": "44",
+        "td": "0",
+        "lng": "44"
+      },
+      "receiving": {
+        "tgt": "6",
+        "rec": "5",
+        "yds": "29",
+        "td": "1",
+        "lng": "10"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BrowAn04.htm",
+      "playerName": "Antonio Brown",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "12",
+        "rec": "7",
+        "yds": "119",
+        "td": "0",
+        "lng": "60"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/W/WheaMa00.htm",
+      "playerName": "Markus Wheaton",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "2",
+        "yds": "23",
+        "td": "0",
+        "lng": "24"
+      },
+      "fumbles": {
+        "fmb": "1",
+        "fl": "1"
+      }
+    },
+    {
+      "playerLink": "/players/M/MillHe00.htm",
+      "playerName": "Heath Miller",
+      "team": "PIT",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "2",
+        "yds": "9",
+        "td": "0",
+        "lng": "5"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/M/McCaA.00.htm",
+      "playerName": "A.J. McCarron",
+      "team": "CIN",
+      "passing": {
+        "cmp": "23",
+        "att": "41",
+        "yds": "212",
+        "td": "1",
+        "int": "1",
+        "sk": "3",
+        "lng": "25",
+        "rate": "68.3"
+      },
+      "rushing": {
+        "att": "5",
+        "yds": "9",
+        "td": "0",
+        "lng": "6"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "3",
+        "fl": "1"
+      }
+    },
+    {
+      "playerLink": "/players/H/HillJe01.htm",
+      "playerName": "Jeremy Hill",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "12",
+        "yds": "50",
+        "td": "1",
+        "lng": "38"
+      },
+      "receiving": {
+        "tgt": "4",
+        "rec": "3",
+        "yds": "27",
+        "td": "0",
+        "lng": "13"
+      },
+      "fumbles": {
+        "fmb": "1",
+        "fl": "1"
+      }
+    },
+    {
+      "playerLink": "/players/B/BernGi00.htm",
+      "playerName": "Giovani Bernard",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "6",
+        "yds": "28",
+        "td": "0",
+        "lng": "14"
+      },
+      "receiving": {
+        "tgt": "4",
+        "rec": "2",
+        "yds": "2",
+        "td": "0",
+        "lng": "4"
+      },
+      "fumbles": {
+        "fmb": "1",
+        "fl": "1"
+      }
+    },
+    {
+      "playerLink": "/players/B/BurkRe00.htm",
+      "playerName": "Rex Burkhead",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "1",
+        "yds": "4",
+        "td": "0",
+        "lng": "4"
+      },
+      "receiving": {
+        "tgt": "1",
+        "rec": "1",
+        "yds": "5",
+        "td": "0",
+        "lng": "5"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/G/GreeA.00.htm",
+      "playerName": "A.J. Green",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "8",
+        "rec": "5",
+        "yds": "71",
+        "td": "1",
+        "lng": "25"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/E/EifeTy00.htm",
+      "playerName": "Tyler Eifert",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "9",
+        "rec": "5",
+        "yds": "58",
+        "td": "0",
+        "lng": "18"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/J/JoneMa02.htm",
+      "playerName": "Marvin Jones",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "7",
+        "rec": "4",
+        "yds": "32",
+        "td": "0",
+        "lng": "13"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/S/SanuMo00.htm",
+      "playerName": "Mohamed Sanu",
+      "team": "CIN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "3",
+        "yds": "17",
+        "td": "0",
+        "lng": "8"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    }
+  ]
+}

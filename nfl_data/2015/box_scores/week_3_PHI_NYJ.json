@@ -1,0 +1,421 @@
+{
+  "boxScoreLink": "/boxscores/201509270nyj.htm",
+  "playerStatsList": [
+    {
+      "playerLink": "/players/B/BradSa00.htm",
+      "playerName": "Sam Bradford",
+      "team": "PHI",
+      "passing": {
+        "cmp": "14",
+        "att": "28",
+        "yds": "118",
+        "td": "1",
+        "int": "0",
+        "sk": "1",
+        "lng": "23",
+        "rate": "73.2"
+      },
+      "rushing": {
+        "att": "3",
+        "yds": "-2",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/M/MathRy00.htm",
+      "playerName": "Ryan Mathews",
+      "team": "PHI",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "24",
+        "yds": "108",
+        "td": "0",
+        "lng": "27"
+      },
+      "receiving": {
+        "tgt": "4",
+        "rec": "2",
+        "yds": "20",
+        "td": "1",
+        "lng": "23"
+      },
+      "fumbles": {
+        "fmb": "1",
+        "fl": "1"
+      }
+    },
+    {
+      "playerLink": "/players/S/SproDa00.htm",
+      "playerName": "Darren Sproles",
+      "team": "PHI",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "11",
+        "yds": "17",
+        "td": "1",
+        "lng": "12"
+      },
+      "receiving": {
+        "tgt": "6",
+        "rec": "4",
+        "yds": "19",
+        "td": "0",
+        "lng": "9"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/M/MattJo00.htm",
+      "playerName": "Jordan Matthews",
+      "team": "PHI",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "8",
+        "rec": "6",
+        "yds": "49",
+        "td": "0",
+        "lng": "17"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/E/ErtzZa00.htm",
+      "playerName": "Zach Ertz",
+      "team": "PHI",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "2",
+        "yds": "30",
+        "td": "0",
+        "lng": "21"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/F/FitzRy00.htm",
+      "playerName": "Ryan Fitzpatrick",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "35",
+        "att": "58",
+        "yds": "283",
+        "td": "2",
+        "int": "3",
+        "sk": "1",
+        "lng": "26",
+        "rate": "62.6"
+      },
+      "rushing": {
+        "att": "4",
+        "yds": "13",
+        "td": "0",
+        "lng": "5"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/P/PoweBi00.htm",
+      "playerName": "Bilal Powell",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "10",
+        "yds": "31",
+        "td": "0",
+        "lng": "10"
+      },
+      "receiving": {
+        "tgt": "8",
+        "rec": "7",
+        "yds": "44",
+        "td": "0",
+        "lng": "13"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/S/StacZa00.htm",
+      "playerName": "Zac Stacy",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "2",
+        "yds": "3",
+        "td": "0",
+        "lng": "2"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "2",
+        "yds": "-2",
+        "td": "0",
+        "lng": "3"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/M/MarsBr00.htm",
+      "playerName": "Brandon Marshall",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "14",
+        "rec": "10",
+        "yds": "109",
+        "td": "1",
+        "lng": "20"
+      },
+      "fumbles": {
+        "fmb": "2",
+        "fl": "1"
+      }
+    },
+    {
+      "playerLink": "/players/E/EnunQu00.htm",
+      "playerName": "Quincy Enunwa",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "10",
+        "rec": "5",
+        "yds": "50",
+        "td": "0",
+        "lng": "26"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/S/SmitDe04.htm",
+      "playerName": "Devin Smith",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "9",
+        "rec": "3",
+        "yds": "39",
+        "td": "0",
+        "lng": "16"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/K/KerlJe00.htm",
+      "playerName": "Jeremy Kerley",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "11",
+        "rec": "6",
+        "yds": "33",
+        "td": "1",
+        "lng": "9"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/C/CumbJe00.htm",
+      "playerName": "Jeff Cumberland",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "4",
+        "rec": "2",
+        "yds": "10",
+        "td": "0",
+        "lng": "5"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    }
+  ]
+}

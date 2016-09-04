@@ -1,0 +1,581 @@
+{
+  "boxScoreLink": "/boxscores/201512060nwe.htm",
+  "playerStatsList": [
+    {
+      "playerLink": "/players/B/BradSa00.htm",
+      "playerName": "Sam Bradford",
+      "team": "PHI",
+      "passing": {
+        "cmp": "14",
+        "att": "24",
+        "yds": "120",
+        "td": "2",
+        "int": "0",
+        "sk": "1",
+        "lng": "20",
+        "rate": "99.3"
+      },
+      "rushing": {
+        "att": "1",
+        "yds": "-1",
+        "td": "0",
+        "lng": "-1"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/S/SproDa00.htm",
+      "playerName": "Darren Sproles",
+      "team": "PHI",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "15",
+        "yds": "66",
+        "td": "0",
+        "lng": "13"
+      },
+      "receiving": {
+        "tgt": "6",
+        "rec": "4",
+        "yds": "34",
+        "td": "0",
+        "lng": "16"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BarnKe00.htm",
+      "playerName": "Kenjon Barner",
+      "team": "PHI",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "9",
+        "yds": "39",
+        "td": "0",
+        "lng": "19"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "2",
+        "yds": "7",
+        "td": "0",
+        "lng": "5"
+      },
+      "fumbles": {
+        "fmb": "1",
+        "fl": "1"
+      }
+    },
+    {
+      "playerLink": "/players/M/MurrDe00.htm",
+      "playerName": "DeMarco Murray",
+      "team": "PHI",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "8",
+        "yds": "24",
+        "td": "0",
+        "lng": "19"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/M/MattJo00.htm",
+      "playerName": "Jordan Matthews",
+      "team": "PHI",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "6",
+        "rec": "3",
+        "yds": "36",
+        "td": "1",
+        "lng": "20"
+      },
+      "fumbles": {
+        "fmb": "1",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/C/CeleBr00.htm",
+      "playerName": "Brent Celek",
+      "team": "PHI",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "1",
+        "rec": "1",
+        "yds": "16",
+        "td": "0",
+        "lng": "16"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/C/CoopRi00.htm",
+      "playerName": "Riley Cooper",
+      "team": "PHI",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "1",
+        "rec": "1",
+        "yds": "14",
+        "td": "0",
+        "lng": "14"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/E/ErtzZa00.htm",
+      "playerName": "Zach Ertz",
+      "team": "PHI",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "4",
+        "rec": "2",
+        "yds": "9",
+        "td": "1",
+        "lng": "5"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/K/KrauJo00.htm",
+      "playerName": "Jonathan Krause",
+      "team": "PHI",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "1",
+        "yds": "4",
+        "td": "0",
+        "lng": "4"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BradTo00.htm",
+      "playerName": "Tom Brady",
+      "team": "NWE",
+      "passing": {
+        "cmp": "29",
+        "att": "56",
+        "yds": "312",
+        "td": "3",
+        "int": "2",
+        "sk": "4",
+        "lng": "30",
+        "rate": "71.4"
+      },
+      "rushing": {
+        "att": "6",
+        "yds": "17",
+        "td": "1",
+        "lng": "12"
+      },
+      "receiving": {
+        "tgt": "1",
+        "rec": "1",
+        "yds": "36",
+        "td": "0",
+        "lng": "36"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/A/AmenDa00.htm",
+      "playerName": "Danny Amendola",
+      "team": "NWE",
+      "passing": {
+        "cmp": "1",
+        "att": "1",
+        "yds": "36",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "36",
+        "rate": "118.7"
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "13",
+        "rec": "7",
+        "yds": "62",
+        "td": "1",
+        "lng": "14"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BlouLe00.htm",
+      "playerName": "LeGarrette Blount",
+      "team": "NWE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "13",
+        "yds": "54",
+        "td": "0",
+        "lng": "10"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BoldBr00.htm",
+      "playerName": "Brandon Bolden",
+      "team": "NWE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "3",
+        "yds": "22",
+        "td": "0",
+        "lng": "14"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "1",
+        "yds": "2",
+        "td": "0",
+        "lng": "2"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/J/JohnDa04.htm",
+      "playerName": "Damaris Johnson",
+      "team": "NWE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "1",
+        "yds": "6",
+        "td": "0",
+        "lng": "6"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/W/WhitJa02.htm",
+      "playerName": "James White",
+      "team": "NWE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "2",
+        "yds": "4",
+        "td": "0",
+        "lng": "8"
+      },
+      "receiving": {
+        "tgt": "13",
+        "rec": "10",
+        "yds": "115",
+        "td": "1",
+        "lng": "25"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/C/ChanSc00.htm",
+      "playerName": "Scott Chandler",
+      "team": "NWE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "7",
+        "rec": "4",
+        "yds": "61",
+        "td": "1",
+        "lng": "30"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/M/MartKe01.htm",
+      "playerName": "Keshawn Martin",
+      "team": "NWE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "8",
+        "rec": "3",
+        "yds": "45",
+        "td": "0",
+        "lng": "19"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/L/LaFeBr00.htm",
+      "playerName": "Brandon LaFell",
+      "team": "NWE",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "9",
+        "rec": "4",
+        "yds": "27",
+        "td": "0",
+        "lng": "12"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    }
+  ]
+}

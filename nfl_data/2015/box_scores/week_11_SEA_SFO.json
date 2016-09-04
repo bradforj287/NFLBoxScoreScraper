@@ -1,0 +1,517 @@
+{
+  "boxScoreLink": "/boxscores/201511220sea.htm",
+  "playerStatsList": [
+    {
+      "playerLink": "/players/G/GabbBl00.htm",
+      "playerName": "Blaine Gabbert",
+      "team": "SFO",
+      "passing": {
+        "cmp": "22",
+        "att": "34",
+        "yds": "264",
+        "td": "1",
+        "int": "0",
+        "sk": "2",
+        "lng": "36",
+        "rate": "98.2"
+      },
+      "rushing": {
+        "att": "4",
+        "yds": "22",
+        "td": "0",
+        "lng": "10"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/D/DrauSh00.htm",
+      "playerName": "Shaun Draughn",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "12",
+        "yds": "37",
+        "td": "0",
+        "lng": "9"
+      },
+      "receiving": {
+        "tgt": "11",
+        "rec": "8",
+        "yds": "40",
+        "td": "0",
+        "lng": "19"
+      },
+      "fumbles": {
+        "fmb": "1",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BoldAn00.htm",
+      "playerName": "Anquan Boldin",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "7",
+        "rec": "5",
+        "yds": "93",
+        "td": "0",
+        "lng": "28"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/M/McDoVa00.htm",
+      "playerName": "Vance McDonald",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "4",
+        "rec": "4",
+        "yds": "65",
+        "td": "1",
+        "lng": "36"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/C/CeleGa00.htm",
+      "playerName": "Garrett Celek",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "2",
+        "yds": "35",
+        "td": "0",
+        "lng": "33"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/S/SmitTo02.htm",
+      "playerName": "Torrey Smith",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "1",
+        "yds": "16",
+        "td": "0",
+        "lng": "16"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/P/PattQu00.htm",
+      "playerName": "Quinton Patton",
+      "team": "SFO",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "2",
+        "yds": "15",
+        "td": "0",
+        "lng": "15"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/W/WilsRu00.htm",
+      "playerName": "Russell Wilson",
+      "team": "SEA",
+      "passing": {
+        "cmp": "24",
+        "att": "29",
+        "yds": "260",
+        "td": "3",
+        "int": "0",
+        "sk": "2",
+        "lng": "31",
+        "rate": "138.5"
+      },
+      "rushing": {
+        "att": "9",
+        "yds": "30",
+        "td": "0",
+        "lng": "8"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/R/RawlTh00.htm",
+      "playerName": "Thomas Rawls",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "30",
+        "yds": "209",
+        "td": "1",
+        "lng": "30"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "3",
+        "yds": "46",
+        "td": "1",
+        "lng": "31"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/J/JackFr02.htm",
+      "playerName": "Fred Jackson",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "4",
+        "yds": "11",
+        "td": "0",
+        "lng": "5"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "2",
+        "yds": "11",
+        "td": "0",
+        "lng": "9"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/L/LockTy00.htm",
+      "playerName": "Tyler Lockett",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "1",
+        "yds": "5",
+        "td": "0",
+        "lng": "5"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "4",
+        "yds": "48",
+        "td": "2",
+        "lng": "24"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BaldDo00.htm",
+      "playerName": "Doug Baldwin",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "6",
+        "rec": "6",
+        "yds": "60",
+        "td": "0",
+        "lng": "21"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/G/GrahJi00.htm",
+      "playerName": "Jimmy Graham",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "3",
+        "yds": "39",
+        "td": "0",
+        "lng": "20"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/K/KearJe01.htm",
+      "playerName": "Jermaine Kearse",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "3",
+        "yds": "34",
+        "td": "0",
+        "lng": "18"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/W/WillLu00.htm",
+      "playerName": "Luke Willson",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "2",
+        "yds": "15",
+        "td": "0",
+        "lng": "10"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/H/HelfCo00.htm",
+      "playerName": "Cooper Helfet",
+      "team": "SEA",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "1",
+        "rec": "1",
+        "yds": "7",
+        "td": "0",
+        "lng": "7"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    }
+  ]
+}

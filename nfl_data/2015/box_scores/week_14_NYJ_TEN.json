@@ -1,0 +1,549 @@
+{
+  "boxScoreLink": "/boxscores/201512130nyj.htm",
+  "playerStatsList": [
+    {
+      "playerLink": "/players/M/MariMa01.htm",
+      "playerName": "Marcus Mariota",
+      "team": "TEN",
+      "passing": {
+        "cmp": "21",
+        "att": "39",
+        "yds": "274",
+        "td": "0",
+        "int": "1",
+        "sk": "5",
+        "lng": "51",
+        "rate": "65.5"
+      },
+      "rushing": {
+        "att": "3",
+        "yds": "3",
+        "td": "0",
+        "lng": "3"
+      },
+      "receiving": {
+        "tgt": "1",
+        "rec": "1",
+        "yds": "41",
+        "td": "1",
+        "lng": "41"
+      },
+      "fumbles": {
+        "fmb": "1",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/A/AndrAn00.htm",
+      "playerName": "Antonio Andrews",
+      "team": "TEN",
+      "passing": {
+        "cmp": "1",
+        "att": "1",
+        "yds": "41",
+        "td": "1",
+        "int": "0",
+        "sk": "0",
+        "lng": "41",
+        "rate": "158.3"
+      },
+      "rushing": {
+        "att": "4",
+        "yds": "8",
+        "td": "0",
+        "lng": "4"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "1",
+        "yds": "6",
+        "td": "0",
+        "lng": "6"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/M/McClDe00.htm",
+      "playerName": "Dexter McCluster",
+      "team": "TEN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "4",
+        "yds": "12",
+        "td": "0",
+        "lng": "8"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "4",
+        "yds": "38",
+        "td": "0",
+        "lng": "28"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/C/CobbDa00.htm",
+      "playerName": "David Cobb",
+      "team": "TEN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "2",
+        "yds": "1",
+        "td": "0",
+        "lng": "3"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/W/WalkHu00.htm",
+      "playerName": "Delanie Walker",
+      "team": "TEN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "13",
+        "rec": "7",
+        "yds": "71",
+        "td": "0",
+        "lng": "16"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/D/DougHa00.htm",
+      "playerName": "Harry Douglas",
+      "team": "TEN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "7",
+        "rec": "3",
+        "yds": "65",
+        "td": "0",
+        "lng": "51"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/G/GreeDo00.htm",
+      "playerName": "Dorial Green-Beckham",
+      "team": "TEN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "7",
+        "rec": "3",
+        "yds": "53",
+        "td": "0",
+        "lng": "27"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/T/TurzAn00.htm",
+      "playerName": "Andrew Turzilli",
+      "team": "TEN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "2",
+        "yds": "25",
+        "td": "0",
+        "lng": "18"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/S/SupePh00.htm",
+      "playerName": "Phillip Supernaw",
+      "team": "TEN",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "1",
+        "yds": "16",
+        "td": "0",
+        "lng": "16"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/F/FitzRy00.htm",
+      "playerName": "Ryan Fitzpatrick",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "21",
+        "att": "36",
+        "yds": "263",
+        "td": "3",
+        "int": "0",
+        "sk": "1",
+        "lng": "69",
+        "rate": "108.9"
+      },
+      "rushing": {
+        "att": "3",
+        "yds": "23",
+        "td": "0",
+        "lng": "19"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/I/IvorCh00.htm",
+      "playerName": "Chris Ivory",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "22",
+        "yds": "101",
+        "td": "0",
+        "lng": "32"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "1",
+        "yds": "6",
+        "td": "0",
+        "lng": "6"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/P/PoweBi00.htm",
+      "playerName": "Bilal Powell",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "3",
+        "yds": "36",
+        "td": "0",
+        "lng": "24"
+      },
+      "receiving": {
+        "tgt": "5",
+        "rec": "5",
+        "yds": "46",
+        "td": "1",
+        "lng": "16"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/R/RidlSt00.htm",
+      "playerName": "Stevan Ridley",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "6",
+        "yds": "23",
+        "td": "0",
+        "lng": "11"
+      },
+      "receiving": {
+        "tgt": "0",
+        "rec": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/M/MarsBr00.htm",
+      "playerName": "Brandon Marshall",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "10",
+        "rec": "6",
+        "yds": "125",
+        "td": "1",
+        "lng": "69"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/D/DeckEr00.htm",
+      "playerName": "Eric Decker",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "10",
+        "rec": "7",
+        "yds": "74",
+        "td": "1",
+        "lng": "20"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/E/EnunQu00.htm",
+      "playerName": "Quincy Enunwa",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "3",
+        "rec": "1",
+        "yds": "10",
+        "td": "0",
+        "lng": "10"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    },
+    {
+      "playerLink": "/players/B/BohaTo00.htm",
+      "playerName": "Tommy Bohanon",
+      "team": "NYJ",
+      "passing": {
+        "cmp": "0",
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "int": "0",
+        "sk": "0",
+        "lng": "0",
+        "rate": ""
+      },
+      "rushing": {
+        "att": "0",
+        "yds": "0",
+        "td": "0",
+        "lng": "0"
+      },
+      "receiving": {
+        "tgt": "2",
+        "rec": "1",
+        "yds": "2",
+        "td": "0",
+        "lng": "2"
+      },
+      "fumbles": {
+        "fmb": "0",
+        "fl": "0"
+      }
+    }
+  ]
+}
