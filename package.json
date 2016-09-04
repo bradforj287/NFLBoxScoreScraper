@@ -2,15 +2,16 @@
   "name": "node-nfl-scraper",
   "version": "0.1.0",
   "description": "Node pro football reference scraper",
-  "main": "main.js",
+  "main": "./src/main.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node ./src/main.js"
   },
   "author": "bradforj287",
   "dependencies": {
     "html-entities": "latest",
     "async": "latest",
     "request": "latest",
-    "cheerio": "latest"
+    "cheerio": "latest",
+    "sql.js": "latest"
   }
 }
