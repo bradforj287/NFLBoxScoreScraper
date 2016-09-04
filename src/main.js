@@ -180,7 +180,6 @@ for (var i = firstYear; i <= lastYear; i++) {
     years.push(i);
 }
 
-/*
 async.eachSeries(years,
     function (item, callback) {
         scrapeNflYear(item, callback);
@@ -190,30 +189,4 @@ async.eachSeries(years,
         scrapeAllPlayerInfo();
     }
 );
-*/
 
-var summary = {
-    "seasonYear": "2015",
-    "week": "1",
-    "day": "Thu",
-    "date": "2015-09-10",
-    "boxScoreLink": "/boxscores/201509100nwe.htm",
-    "winningTeam": "New England Patriots",
-    "isWinningTeamHome": true,
-    "losingTeam": "Pittsburgh Steelers",
-    "wtPoints": "28",
-    "ltPoints": "21",
-    "wtYards": "361",
-    "wtTurnovers": "0",
-    "ltYards": "464",
-    "ltTurnovers": "1"
-};
-
-/*
-nflScraper.scrapeGameSummaries(2015, (summaries) => {
-   console.log(summaries)
-}); */
-
-nflScraper.scrapeBoxScore(summary, (boxscore) => {
-    console.log(boxscore);
-});

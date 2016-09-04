@@ -1,11 +1,12 @@
 var exports = module.exports = {};
-
+var _ = require('lodash');
 var nflUtils = require('../utils/nfl-utils.js');
 var cheerio = require('cheerio');
 var async = require("async");
 var Horseman = require("node-horseman");
 var HtmlEntities = require('html-entities').AllHtmlEntities;
 var entities = new HtmlEntities();
+var parse = require('csv-parse');
 
 const TIME_TO_WAIT_FOR_LOAD = 1000;
 
@@ -64,9 +65,43 @@ exports.scrapeGameSummaries = function(nflYear, finishedFunc) {
     });
 };
 
-function parseBoxScoreCsv(csv) {
-    console.log(csv);
-    return null;
+function parseBoxScoreCsv(csv, cb) {
+    var csvinput = _.trim(csv, '\n');
+    parse(csvinput, {comment: '#'}, function(err, rows) {
+        var statList = [];
+
+        for (var i = 2; i < rows.length; i++) { // first 2 rows are headers
+            var cols = rows[i];
+            var namePair = cols[0];
+            var name = namePair.split("\\")[0];
+            var id = namePair.split("\\")[1];
+            var firstLetter = id.charAt(0);
+            var playerPath = `/players/${firstLetter}/${id}.htm`;
+            var team = cols[1];
+
+            var playerStats = {
+                playerLink: playerPath,
+                playerName: name,
+                team: team
+            };
+
+            for (var j = 2; j < cols.length; j++) {
+                var statVal = cols[j].trim();
+                var statCat = rows[0][j].toLowerCase();
+                var statSubCat = rows[1][j].toLowerCase();
+                //validateCats(statCat, statSubCat); TODO validate to check for updates necessary
+                if (!playerStats[statCat]) {
+                    playerStats[statCat] = {};
+                }
+                if (!playerStats[statCat][statSubCat]) {
+                    playerStats[statCat][statSubCat] = statVal;
+                }
+            }
+            statList.push(playerStats);
+        }
+
+        cb(statList);
+    });
 }
 
 exports.scrapeBoxScore = function(summary, cb) {
@@ -75,7 +110,7 @@ exports.scrapeBoxScore = function(summary, cb) {
 
     var horseman = new Horseman();
     horseman
-        .viewport(1920,1080)
+        .viewport(1920, 1080)
         .open(url)
         .wait(TIME_TO_WAIT_FOR_LOAD)
         .click('#all_player_offense .section_heading_text .hasmore li:nth-child(3) button')
@@ -83,35 +118,8 @@ exports.scrapeBoxScore = function(summary, cb) {
         .text('#csv_player_offense')
         .close()
         .then((text) => {
-            var boxScore = parseBoxScoreCsv(text);
-            cb(boxScore);
+            parseBoxScoreCsv(text, cb);
         });
-
-    /*var playerStats = {
-        playerLink: row.find('th:nth-child(1) a').attr("href"),
-        playerName: entities.decode(row.find('th:nth-child(1) a').html()).toLowerCase(),
-        team: row.find('td:nth-child(2)').html(),
-        passing: {
-            completions: row.find('td:nth-child(3)').html(),
-            attempts: row.find('td:nth-child(4)').html(),
-            yards: row.find('td:nth-child(5)').html(),
-            td: row.find('td:nth-child(6)').html(),
-            int: row.find('td:nth-child(7)').html(),
-            longest: row.find('td:nth-child(8)').html()
-        },
-        rushing: {
-            attempts: row.find('td:nth-child(9)').html(),
-            yards: row.find('td:nth-child(10)').html(),
-            td: row.find('td:nth-child(11)').html(),
-            longest: row.find('td:nth-child(12)').html()
-        },
-        receiving: {
-            receptions: row.find(getColSelector(receivingBase)).html(),
-            yards: row.find(getColSelector(receivingBase + 1)).html(),
-            td: row.find(getColSelector(receivingBase + 2)).html(),
-            longest: row.find(getColSelector(receivingBase + 3)).html()
-        }
-    };*/
 };
 
 exports.scrapePlayerInfo = function(playerLink, finishedFunc) {
