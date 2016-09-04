@@ -12,6 +12,7 @@
     "async": "latest",
     "request": "latest",
     "cheerio": "latest",
-    "sql.js": "latest"
+    "sql.js": "latest",
+    "phantom" : "2.1.21"
   }
 }

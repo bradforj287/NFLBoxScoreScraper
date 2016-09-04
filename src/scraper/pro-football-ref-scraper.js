@@ -3,13 +3,47 @@ var exports = module.exports = {};
 var request = require('request');
 var cheerio = require('cheerio');
 var async = require("async");
+var phantom = require('phantom');
 
 var HtmlEntities = require('html-entities').AllHtmlEntities;
 var entities = new HtmlEntities();
 
-
 var nflUtils = require('../utils/nfl-utils.js');
 
+/**
+ * creates a new phantom js instance and fetches the page at the specified url
+ * @param url - url of page to scrape
+ * @param cb - called with data on success
+ * @param fb - called on failure
+ */
+function fetchHtmlPhantomJs(url, cb, fb) {
+    var sitepage = null;
+    var phInstance = null;
+    phantom.create()
+        .then(instance => {
+            phInstance = instance;
+            return instance.createPage();
+        })
+        .then(page => {
+            sitepage = page;
+            return page.open(url);
+        })
+        .then(status => {
+            console.log(status);
+            return sitepage.property('content');
+        })
+        .then(content => {
+            // console.log(content);
+            sitepage.close();
+            phInstance.exit();
+            cb(content);
+        })
+        .catch(error => {
+            console.log(error);
+            phInstance.exit();
+            process.exit();
+        });
+}
 
 exports.scrapeGameSummaries = function(nflYear, finishedFunc) {
     var url = 'http://www.pro-football-reference.com/years/' + nflYear + '/games.htm';
@@ -61,13 +95,13 @@ exports.scrapeBoxScore = function(summary, finishedFunc) {
     var url = 'http://www.pro-football-reference.com' + summary.boxScoreLink;
 
     console.log('scraping box score for: ' + summary.boxScoreLink + " -> " + nflUtils.getGameTitleForSummary(summary));
-    request(url, function (error, response, html) {
+    request(url, function(error, response, html) {
         if (!error) {
             var $ = cheerio.load(html);
 
             var playerStatsList = [];
             var hasTargetCol = $("#skill_stats thead th[data-stat=targets]").length > 0;
-            $("#player_offense tbody tr").each(function (index) {
+            $("#player_offense tbody tr").each(function(index) {
 
                 var row = $(this);
                 if (row.hasClass("thead")) {
@@ -124,10 +158,9 @@ exports.scrapeBoxScore = function(summary, finishedFunc) {
     });
 };
 
-
 exports.scrapePlayerInfo = function(playerLink, finishedFunc) {
     var url = 'http://www.pro-football-reference.com' + playerLink;
-    request(url, function (error, response, html) {
+    request(url, function(error, response, html) {
         if (!error) {
             var $ = cheerio.load(html);
 
