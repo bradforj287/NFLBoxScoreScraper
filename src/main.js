@@ -18,7 +18,7 @@ module.exports = fs.existsSync || function existsSync(filePath) {
         return true;
     };
 
-var NUM_PARALLEL_REQ = 1;
+var NUM_PARALLEL_REQ = 2;
 
 function chunkArray(arr, chunkSize) {
     var array = arr;
@@ -35,7 +35,10 @@ function recordPlayerLinks(bs) {
     var playerStatsList = bs.playerStatsList;
     playerStatsList.forEach(function (ps) {
         var link = ps.playerLink;
-        playerLinksSeen[link] = true;
+        playerLinksSeen[link] = {
+            name: ps.playerName,
+            playerLink: link
+        };
     });
 }
 
@@ -71,7 +74,12 @@ function scrapeBoxScoreChunk(summaries, onFinishFunc) {
             var filePath = nflRootDir + "/" + item.seasonYear + "/box_scores/" + fileName;
             if (fs.existsSync(filePath)) {
                 console.log('NO NEED to scrape box score for: ' + item.boxScoreLink + " -> " + nflUtils.getGameTitleForSummary(item));
-                var theData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                try {
+                    var theData = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+                } catch (err) {
+                    console.log('error calling JSON parse on this file ' + filePath);
+                    throw err;
+                }
                 recordPlayerLinks(theData);
                 callback();
             } else {
@@ -142,7 +150,7 @@ function scrapePlayerInfoChunk(list, cb) {
                 callback();
             } else {
                 console.log('scraping player_info: ' + item);
-                nflScraper.scrapePlayerInfo(item, function (data) {
+                nflScraper.scrapePlayerInfo(playerLinksSeen[item], function (data) {
 
                     fs.writeFile(filePath, toJSON(data), function (err) {
                         console.log('wrote ' + filePath);

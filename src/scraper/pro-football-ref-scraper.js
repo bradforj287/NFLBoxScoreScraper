@@ -114,7 +114,6 @@ exports.scrapeBoxScore = function(summary, cb) {
         .open(url)
         .wait(TIME_TO_WAIT_FOR_LOAD)
         .click('#all_player_offense .section_heading_text .hasmore li:nth-child(3) button')
-        .wait(1000)
         .text('#csv_player_offense')
         .close()
         .then((text) => {
@@ -128,22 +127,22 @@ exports.scrapeBoxScore = function(summary, cb) {
         });
 };
 
-exports.scrapePlayerInfo = function(playerLink, finishedFunc) {
-    var url = 'http://www.pro-football-reference.com' + playerLink;
-    request(url, function(error, response, html) {
-        if (!error) {
-            var $ = cheerio.load(html);
-
-            var playerInfo = {
-                playerLink: playerLink,
+exports.scrapePlayerInfo = function(link, cb) {
+    var url = 'http://www.pro-football-reference.com' + link.playerLink;
+    var horseman = new Horseman();
+    horseman
+        .viewport(1920, 1080)
+        .open(url)
+        .wait(TIME_TO_WAIT_FOR_LOAD)
+        .evaluate(function() {
+            return {
                 position: $("#div_fantasy tbody tr").last().find('td:nth-child(4)').html(),
                 birthday: $("#necro-birth").attr("data-birth"),
-                name: entities.decode($("#info_box > div.float_left > h1").html()).toLowerCase()
-            };
-
-            finishedFunc(playerInfo, true);
-        } else {
-            finishedFunc(null, false);
-        }
-    });
-}
+            }
+        })
+        .close()
+        .then((obj) => {
+            obj.name = link.name;
+            cb(obj);
+        });
+};
