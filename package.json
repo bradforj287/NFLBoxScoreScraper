@@ -9,6 +9,7 @@
   },
   "author": "bradforj287",
   "dependencies": {
+    "puppeteer": "0.9.0",
     "html-entities": "latest",
     "async": "latest",
     "cheerio": "latest",
