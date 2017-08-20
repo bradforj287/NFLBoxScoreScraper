@@ -104,9 +104,7 @@ function NflScraper() {
 
     this.scrapeBoxScore = async function(boxScoreLink) {
         const url = 'http://www.pro-football-reference.com' + boxScoreLink;
-        const browser = await puppeteer.launch({
-            headless: false
-        });
+        const browser = await puppeteer.launch();
         try {
             const page = await browser.newPage();
             await page.goto(url);
@@ -114,26 +112,19 @@ function NflScraper() {
             const csvButtonSelector = '#all_player_offense .section_heading_text .hasmore li:nth-child(4) button';
             await page.waitForSelector(csvButtonSelector);
 
-            const csvButton = await page.$(csvButtonSelector);
+            const clickEvaluation = `document.querySelector('${csvButtonSelector}').click()`;
+            await page.evaluate(clickEvaluation); // for some reason the native click() calls aren't working but this is...
 
-            await csvButton.click({
-                delay: 50
-            });
+            const extractTableCommand = `document.querySelector('#csv_player_offense').textContent`;
+            const csv = await page.evaluate(extractTableCommand);
 
-            const commandToRunOnPage = `document.querySelector('#csv_player_offense').textContent`;
-
-            const csv = await page.evaluate(commandToRunOnPage);
-
-            var boxScore = {
+            return {
                 boxScoreLink: boxScoreLink,
                 playerStatsList: await parseBoxScoreCsv(csv)
             };
-
-            return boxScore;
         } finally {
             browser.close();
         }
-
     };
 }
 

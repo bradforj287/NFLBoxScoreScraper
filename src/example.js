@@ -7,7 +7,7 @@ const nflScraper = new NflScraper();
     //console.log(JSON.stringify(summaries));
 
     var boxScore = await nflScraper.scrapeBoxScore('/boxscores/201509100nwe.htm');
-    console.log(boxScore);
+    console.log(JSON.stringify(boxScore));
 })();
 
 
