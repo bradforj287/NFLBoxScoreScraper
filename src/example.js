@@ -6,8 +6,8 @@ const nflScraper = new NflScraper();
     //var summaries = await nflScraper.scrapeGameSummaries(2015);
     //console.log(JSON.stringify(summaries));
 
-    var boxScore = await nflScraper.scrapeBoxScore('/boxscores/201509100nwe.htm');
-    console.log(JSON.stringify(boxScore));
+    var playerInfo = await nflScraper.scrapePlayerInfo('/players/R/RoetBe00.htm');
+    console.log(JSON.stringify(playerInfo));
 })();
 
 

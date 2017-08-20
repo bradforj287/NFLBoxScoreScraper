@@ -126,6 +126,37 @@ function NflScraper() {
             browser.close();
         }
     };
+
+    function getPlayerPositionFromFantasyTable(fantasyTableHtml) {
+        var $ = cheerio.load(fantasyTableHtml);
+        return $("tbody tr").last().find('td:nth-child(4)').html()
+    }
+
+    this.scrapePlayerInfo = async function(playerLink) {
+        const url = 'http://www.pro-football-reference.com' + playerLink;
+        const browser = await puppeteer.launch();
+        try {
+            const page = await browser.newPage();
+            await page.goto(url);
+
+            const scrapeSelector = '#div_fantasy';
+            await page.waitForSelector(scrapeSelector);
+
+            const scrapeCommand = `document.querySelector('${scrapeSelector}').innerHTML`;
+            const fantasyTableHtml = await page.evaluate(scrapeCommand);
+
+            await page.waitForSelector('#necro-birth');
+
+            const birthDate = await page.evaluate("document.querySelector('#necro-birth').getAttribute('data-birth')");
+
+            return {
+                position: getPlayerPositionFromFantasyTable(fantasyTableHtml),
+                birthday: birthDate
+            }
+        } finally {
+            browser.close();
+        }
+    };
 }
 
 module.exports = NflScraper;
