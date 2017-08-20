@@ -113,7 +113,7 @@ exports.scrapeBoxScore = function(summary, cb) {
         .viewport(1920, 1080)
         .open(url)
         .wait(TIME_TO_WAIT_FOR_LOAD)
-        .click('#all_player_offense .section_heading_text .hasmore li:nth-child(3) button')
+        .click('#all_player_offense .section_heading_text .hasmore li:nth-child(4) button')
         .text('#csv_player_offense')
         .close()
         .then((text) => {

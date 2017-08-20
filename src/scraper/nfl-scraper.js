@@ -1,6 +1,8 @@
 var exports = module.exports = {};
 var cheerio = require('cheerio');
 const puppeteer = require('puppeteer');
+var parse = require('csv-parse');
+var _ = require('lodash');
 
 function NflScraper() {
     async function openPageTakeHtml(url, selector) {
@@ -14,6 +16,48 @@ function NflScraper() {
         } finally {
             browser.close();
         }
+    }
+
+    function parseBoxScoreCsv(csv) {
+        return new Promise(
+            (resolve, reject) => {
+                var csvinput = _.trim(csv, '\n');
+                parse(csvinput, {comment: '#'}, function(err, rows) {
+                    var statList = [];
+
+                    for (var i = 2; i < rows.length; i++) { // first 2 rows are headers
+                        var cols = rows[i];
+                        var namePair = cols[0];
+                        var name = namePair.split("\\")[0];
+                        var id = namePair.split("\\")[1];
+                        var firstLetter = id.charAt(0);
+                        var playerPath = `/players/${firstLetter}/${id}.htm`;
+                        var team = cols[1];
+
+                        var playerStats = {
+                            playerLink: playerPath,
+                            playerName: name,
+                            team: team
+                        };
+
+                        for (var j = 2; j < cols.length; j++) {
+                            var statVal = cols[j].trim();
+                            var statCat = rows[0][j].toLowerCase();
+                            var statSubCat = rows[1][j].toLowerCase();
+                            //validateCats(statCat, statSubCat); TODO validate to check for updates necessary
+                            if (!playerStats[statCat]) {
+                                playerStats[statCat] = {};
+                            }
+                            if (!playerStats[statCat][statSubCat]) {
+                                playerStats[statCat][statSubCat] = statVal;
+                            }
+                        }
+                        statList.push(playerStats);
+                    }
+
+                    resolve(statList);
+                });
+            });
     }
 
     this.scrapeGameSummaries = async function(nflYear) {
@@ -33,12 +77,13 @@ function NflScraper() {
             function ds(statName) {
                 return `[data-stat='${statName}']`;
             }
+
             var gameSummary = {
                 seasonYear: nflYear,
                 week: row.find(ds('week_num')).html(),
                 day: row.find(ds('game_day_of_week')).html(),
                 date: row.find(ds('game_date')).attr("csk"),
-                gameTime:row.find(ds('gametime')).html(),
+                gameTime: row.find(ds('gametime')).html(),
                 boxScoreLink: row.find(ds('boxscore_word') + ' a').attr("href"),
                 winningTeam: row.find("[data-stat='winner'] a").html(),
                 winningTeamLink: row.find("[data-stat='winner'] a").attr("href"),
@@ -55,6 +100,40 @@ function NflScraper() {
             retVal.push(gameSummary);
         });
         return retVal;
+    };
+
+    this.scrapeBoxScore = async function(boxScoreLink) {
+        const url = 'http://www.pro-football-reference.com' + boxScoreLink;
+        const browser = await puppeteer.launch({
+            headless: false
+        });
+        try {
+            const page = await browser.newPage();
+            await page.goto(url);
+
+            const csvButtonSelector = '#all_player_offense .section_heading_text .hasmore li:nth-child(4) button';
+            await page.waitForSelector(csvButtonSelector);
+
+            const csvButton = await page.$(csvButtonSelector);
+
+            await csvButton.click({
+                delay: 50
+            });
+
+            const commandToRunOnPage = `document.querySelector('#csv_player_offense').textContent`;
+
+            const csv = await page.evaluate(commandToRunOnPage);
+
+            var boxScore = {
+                boxScoreLink: boxScoreLink,
+                playerStatsList: await parseBoxScoreCsv(csv)
+            };
+
+            return boxScore;
+        } finally {
+            browser.close();
+        }
+
     };
 }
 

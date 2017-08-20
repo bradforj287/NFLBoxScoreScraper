@@ -2,6 +2,12 @@ var NflScraper = require('./scraper/nfl-scraper.js');
 
 const nflScraper = new NflScraper();
 
-nflScraper.scrapeGameSummaries(2015).then((summaries) => {
-    console.log(JSON.stringify(summaries));
-});
+(async function() {
+    //var summaries = await nflScraper.scrapeGameSummaries(2015);
+    //console.log(JSON.stringify(summaries));
+
+    var boxScore = await nflScraper.scrapeBoxScore('/boxscores/201509100nwe.htm');
+    console.log(boxScore);
+})();
+
+
