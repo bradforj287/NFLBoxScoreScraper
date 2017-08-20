@@ -1,0 +1,18 @@
+[
+  {
+    "seasonYear": "2016",
+    "week": "1",
+    "day": "Thu",
+    "date": "2016-09-08",
+    "boxScoreLink": "/boxscores/201609080den.htm",
+    "winningTeam": "Denver Broncos",
+    "isWinningTeamHome": true,
+    "losingTeam": "Carolina Panthers",
+    "wtPoints": "21",
+    "ltPoints": "20",
+    "wtYards": "307",
+    "wtTurnovers": "3",
+    "ltYards": "333",
+    "ltTurnovers": "1"
+  }
+]
