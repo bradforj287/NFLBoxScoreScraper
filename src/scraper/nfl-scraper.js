@@ -5,16 +5,32 @@ var parse = require('csv-parse');
 var _ = require('lodash');
 
 function NflScraper() {
+    const PAGE_LOAD_TIMEOUT = 30 * 1000;
+    this.browser = null;
+    const vm = this;
+
+    async function getBrowser() {
+        if (this.browser) {
+            return this.browser;
+        }
+
+        this.browser = await puppeteer.launch();
+        return this.browser;
+    }
+
     async function openPageTakeHtml(url, selector) {
-        const browser = await puppeteer.launch();
+        const browser = await getBrowser();
+        const page = await browser.newPage();
         try {
-            const page = await browser.newPage();
-            await page.goto(url);
+            await page.goto(url, {timeout: PAGE_LOAD_TIMEOUT});
             const commandToRunOnPage = `document.querySelector('${selector}').innerHTML`;
             const html = await page.evaluate(commandToRunOnPage);
             return html;
+        } catch (ex) {
+            console.log(ex);
+            throw ex;
         } finally {
-            browser.close();
+            page.close();
         }
     }
 
@@ -60,7 +76,19 @@ function NflScraper() {
             });
     }
 
-    this.scrapeGameSummaries = async function(nflYear) {
+    async function retryOnTimeout(func) {
+        const NUM_PAGE_LOAD_RETRIES = 10;
+        for (var i = 0; i < NUM_PAGE_LOAD_RETRIES; i++) {
+            try {
+                return await func();
+            } catch (ex) {
+                console.log(`got exception: ${ex.message} retrying...`);
+            }
+        }
+        throw new Error(`call failed after ${NUM_PAGE_LOAD_RETRIES} retries`);
+    }
+
+    async function scrapeGameSummariesImpl(nflYear) {
         const url = `http://www.pro-football-reference.com/years/${nflYear}/games.htm`;
         const summaryHtml = await openPageTakeHtml(url, '#games');
         var $ = cheerio.load(summaryHtml);
@@ -100,14 +128,14 @@ function NflScraper() {
             retVal.push(gameSummary);
         });
         return retVal;
-    };
+    }
 
-    this.scrapeBoxScore = async function(boxScoreLink) {
+    async function scrapeBoxScoreImpl(boxScoreLink) {
         const url = 'http://www.pro-football-reference.com' + boxScoreLink;
-        const browser = await puppeteer.launch();
+        const theBrowser = await getBrowser();
+        const page = await theBrowser.newPage();
         try {
-            const page = await browser.newPage();
-            await page.goto(url);
+            await page.goto(url, {timeout: PAGE_LOAD_TIMEOUT});
 
             const csvButtonSelector = '#all_player_offense .section_heading_text .hasmore li:nth-child(4) button';
             await page.waitForSelector(csvButtonSelector);
@@ -122,22 +150,25 @@ function NflScraper() {
                 boxScoreLink: boxScoreLink,
                 playerStatsList: await parseBoxScoreCsv(csv)
             };
+        } catch (ex) {
+            console.log(ex);
+            throw ex;
         } finally {
-            browser.close();
+            page.close();
         }
-    };
+    }
 
     function getPlayerPositionFromFantasyTable(fantasyTableHtml) {
         var $ = cheerio.load(fantasyTableHtml);
         return $("tbody tr").last().find('td:nth-child(4)').html()
     }
 
-    this.scrapePlayerInfo = async function(playerLink) {
+    async function scrapePlayerInfo(playerLink) {
         const url = 'http://www.pro-football-reference.com' + playerLink;
-        const browser = await puppeteer.launch();
+        const theBrowser = await getBrowser();
+        const page = await theBrowser.newPage();
         try {
-            const page = await browser.newPage();
-            await page.goto(url);
+            await page.goto(url, {timeout: PAGE_LOAD_TIMEOUT});
 
             const scrapeSelector = '#div_fantasy';
             await page.waitForSelector(scrapeSelector);
@@ -153,9 +184,30 @@ function NflScraper() {
                 position: getPlayerPositionFromFantasyTable(fantasyTableHtml),
                 birthday: birthDate
             }
+        } catch (ex) {
+            console.log(ex);
+            throw ex;
         } finally {
-            browser.close();
+            page.close();
         }
+    }
+
+    this.scrapePlayerInfo = async function(playerLink) {
+        return await retryOnTimeout(async () => {
+            return await scrapePlayerInfo(playerLink);
+        });
+    };
+
+    this.scrapeGameSummaries = async function (nflYear) {
+        return await retryOnTimeout(async () => {
+            return await scrapeGameSummariesImpl(nflYear);
+        });
+    };
+
+    this.scrapeBoxScore = async function(boxScoreLink) {
+        return await retryOnTimeout(async () => {
+            return await scrapeBoxScoreImpl(boxScoreLink);
+        });
     };
 }
 
