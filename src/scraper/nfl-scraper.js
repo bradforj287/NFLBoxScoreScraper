@@ -6,25 +6,38 @@ var _ = require('lodash');
 
 function NflScraper() {
     const PAGE_LOAD_TIMEOUT = 30 * 1000;
-    this.browser = null;
+    var browser = null;
     const vm = this;
 
-    async function getBrowser() {
-        if (this.browser) {
-            return this.browser;
+    function precondition(statement, msg) {
+        if (!statement) {
+            if (msg) {
+                throw new Error(msg)
+            } else {
+                throw new Error();
+            }
         }
-
-        this.browser = await puppeteer.launch();
-        return this.browser;
     }
 
-    async function openPageTakeHtml(url, selector) {
+    function checkNotEmpty(statement) {
+        precondition(!!statement);
+    }
+
+    async function getBrowser() {
+        if (browser) {
+            return browser;
+        }
+
+        browser = await puppeteer.launch();
+        return browser;
+    }
+
+    async function openPageTakeHtml(url) {
         const browser = await getBrowser();
         const page = await browser.newPage();
         try {
             await page.goto(url, {timeout: PAGE_LOAD_TIMEOUT});
-            const commandToRunOnPage = `document.querySelector('${selector}').innerHTML`;
-            const html = await page.evaluate(commandToRunOnPage);
+            const html = await page.evaluate('new XMLSerializer().serializeToString(document.doctype) + document.documentElement.outerHTML');
             return html;
         } catch (ex) {
             console.log(ex);
@@ -90,10 +103,10 @@ function NflScraper() {
 
     async function scrapeGameSummariesImpl(nflYear) {
         const url = `http://www.pro-football-reference.com/years/${nflYear}/games.htm`;
-        const summaryHtml = await openPageTakeHtml(url, '#games');
+        const summaryHtml = await openPageTakeHtml(url);
         var $ = cheerio.load(summaryHtml);
         var retVal = [];
-        $('tbody tr').each(function(index) {
+        $('#games tbody tr').each(function(index) {
             var row = $(this);
             if (row.hasClass("thead")) {
                 return
@@ -193,18 +206,21 @@ function NflScraper() {
     }
 
     this.scrapePlayerInfo = async function(playerLink) {
+        checkNotEmpty(playerLink);
         return await retryOnTimeout(async () => {
             return await scrapePlayerInfo(playerLink);
         });
     };
 
     this.scrapeGameSummaries = async function (nflYear) {
+        checkNotEmpty(nflYear);
         return await retryOnTimeout(async () => {
             return await scrapeGameSummariesImpl(nflYear);
         });
     };
 
     this.scrapeBoxScore = async function(boxScoreLink) {
+        checkNotEmpty(boxScoreLink);
         return await retryOnTimeout(async () => {
             return await scrapeBoxScoreImpl(boxScoreLink);
         });

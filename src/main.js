@@ -91,7 +91,7 @@ function scrapeBoxScoreChunk(summaries, onFinishFunc) {
                         });
                     }
                     callback();
-                });
+                }).catch((err) => console.log(err));
             }
         },
         function(err) {
@@ -156,6 +156,8 @@ function scrapePlayerInfoChunk(list, cb) {
                         console.log('wrote ' + filePath);
                     });
                     callback();
+                }).catch((err) => {
+                    console.log(err);
                 });
             }
         },

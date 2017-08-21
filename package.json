@@ -13,7 +13,6 @@
     "html-entities": "latest",
     "async": "latest",
     "cheerio": "latest",
-    "node-horseman": "3.1.1",
     "csv-parse": "1.1.7",
     "lodash": "4.15.0"
   }
