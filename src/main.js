@@ -1,13 +1,19 @@
 var fs = require('fs');
 var async = require("async");
+var path = require('path');
 var NflScraper = require('./scraper/nfl-scraper.js');
 const nflScraper = new NflScraper();
 var nflUtils = require('./utils/nfl-utils.js');
 
-var programArgs = JSON.parse(fs.readFileSync('../arguments.json', 'utf8'));
-var firstYear = programArgs.minNflYear;
-var lastYear = programArgs.maxNflYear;
-var nflRootDir = programArgs.nflDataRoot;
+
+const appRoot = require('app-root-path');
+const argumentFilePath = path.resolve(appRoot.path, 'arguments.json');
+const programArgs = JSON.parse(fs.readFileSync(argumentFilePath, 'utf8'));
+
+const firstYear = programArgs.minNflYear;
+const lastYear = programArgs.maxNflYear;
+
+const nflRootDir = path.resolve(appRoot.path, 'nfl_data');
 
 module.exports = fs.existsSync || function existsSync(filePath) {
     try {

@@ -14,7 +14,6 @@ npm start
 ```
 
 ##Program Arguments (set in arguments.json):
-* nflDataRoot - this is the directory that the box scores will be downloaded to
 * minNflYear - the earliest NFL year to scrape
 * maxNflYear - the maximum NFL year to scrape
  
