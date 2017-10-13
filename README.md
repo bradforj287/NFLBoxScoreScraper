@@ -5,7 +5,7 @@ A web scraper that will download box scores from http://www.profootballreference
 
 
 ##Requirements:
-* Node.js
+* Node.js version 8.4 or higher
 
 ##Program Usage:
 ```
