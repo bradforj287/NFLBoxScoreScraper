@@ -28,10 +28,12 @@ const teamNameToShortHand = {
     "Kansas City Chiefs": "KAN",
     "Minnesota Vikings": "MIN",
     "St. Louis Rams": "STL",
+    "Los Angeles Rams": "LAR",
     "Buffalo Bills": "BUF",
     "Chicago Bears": "CHI",
     "Arizona Cardinals": "ARI",
     "San Diego Chargers": "SDG",
+    "Los Angeles Chargers": "LAC",
     "Detroit Lions": "DET",
     "New York Giants": "NYG"
 };
